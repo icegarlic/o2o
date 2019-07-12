@@ -1,0 +1,27 @@
+$(function () {
+    var productId = getQueryString('productId');
+    var productUrl = '/o2o_war_exploded/frontend/listproductdetailpageinfo?productId='
+        + productId;
+
+    $.getJSON(productUrl, function (data) {
+        if (data.success) {
+            var product = data.product;
+            $('#product-img').attr('src', product.imgAddr);
+            $('#product-time').text(
+                new Date(product.lastEditTime)
+                    .Format("yyyy-MM-dd"));
+            $('#product-name').text(product.productName);
+            $('#product-desc').text(product.productDesc);
+            var imgListHtml = '';
+            product.productImgList.map(function (item, index) {
+                imgListHtml += '<div> <img src="'
+                    + item.imgAddr + '"/></div>';
+            });
+
+        }
+    });
+    $('#me').click(function () {
+        $.openPanel('#panel-left-demo');
+    });
+    $.init();
+});
