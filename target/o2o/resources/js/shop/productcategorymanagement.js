@@ -1,8 +1,8 @@
 $(function () {
    // 或者 o2o 下面同理
-   var listUrl = '/o2o_war_exploded/shopadmin/getproductcategorylist';
-   var addUrl = '/o2o_war_exploded/shopadmin/addproductcategorys';
-   var deleteurl = '/o2o_war_exploded/shopadmin/removeproductcategory';
+   var listUrl = '/o2o/shopadmin/getproductcategorylist';
+   var addUrl = '/o2o/shopadmin/addproductcategorys';
+   var deleteurl = '/o2o/shopadmin/removeproductcategory';
    getList();
    function getList() {
       $.getJSON(

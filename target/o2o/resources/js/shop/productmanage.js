@@ -1,8 +1,8 @@
 $(function () {
     // 获取此店铺下的商品列表URL
-    var listUrl = '/o2o_war_exploded/shopadmin/getproductlistbyshop?pageIndex=1&pageSize=9999';
+    var listUrl = '/o2o/shopadmin/getproductlistbyshop?pageIndex=1&pageSize=9999';
     // 商品下架URL
-    var statusURL = '/o2o_war_exploded/shopadmin/modifyproduct';
+    var statusURL = '/o2o/shopadmin/modifyproduct';
     getList();
 
     /**
@@ -100,7 +100,7 @@ $(function () {
             var target = $(e.currentTarget);
             if (target.hasClass('edit')) {
                 // 如果有 class edit 则点击就进入店铺信息编辑页面，并带有productId参数
-                window.location.href = '/o2o_war_exploded/shopadmin/productoperation?productId='
+                window.location.href = '/o2o/shopadmin/productoperation?productId='
                     + e.currentTarget.dataset.id;
             } else if (target.hasClass('status')) {
                 // 如果有 class status则调用后台功能上下架相关商品，并带有productId参数
@@ -108,12 +108,12 @@ $(function () {
                     e.currentTarget.dataset.status);
             } else if (target.hasClass('preview')) {
                 // 如果有class preview 则会去前台展示系统该商品详情页预览商品情况
-                window.location.href = '/o2o_war_exploded/frontend/productdetail?productId='
+                window.location.href = '/o2o/frontend/productdetail?productId='
                     + e.currentTarget.dataset.id;
             }
         });
 
     $('#new').click(function () {
-        window.location.href = '/o2o_war_exploded/shopadmin/productoperation';
+        window.location.href = '/o2o/shopadmin/productoperation';
     });
 });

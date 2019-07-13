@@ -83,6 +83,7 @@
         s.priority DESC
         LIMIT #{rowIndex},#{pageSize};
     </select>
+
     <select id="queryShopCount" resultType="Integer">
         SELECT
         count(1)
@@ -120,6 +121,7 @@
             s.shop_category_id=sc.shop_category_id
         </where>
     </select>
+
     <select id="queryByShopId" resultMap="shopMap" parameterType="Long">
         SELECT
         s.shop_id,

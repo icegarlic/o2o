@@ -5,14 +5,10 @@ $(function(){
     var shopId = getQueryString('shopId');
     var isEdit = shopId ? true : false;
     // 若加载不出js可更换地址
-    // 原来地址 initUrl = '/o2o/shopadmin/getshopinitinfo';
-    var initUrl = '/o2o_war_exploded/shopadmin/getshopinitinfo';
-    // registerShopUrl = '/o2o/shopadmin/registershop';
-    var registerShopUrl = '/o2o_war_exploded/shopadmin/registershop';
-    // shopInfoUrl = '/o2o/shopadmin/getshopbyid?shopId=' + shopId;
-    var shopInfoUrl = '/o2o_war_exploded/shopadmin/getshopbyid?shopId=' + shopId;
-    // editShopUrl = '/o2o/shopadmin/modifyshop';
-    var editShopUrl = '/o2o_war_exploded/shopadmin/modifyshop';
+    var initUrl = '/o2o/shopadmin/getshopinitinfo';
+    var registerShopUrl = '/o2o/shopadmin/registershop';
+    var shopInfoUrl = '/o2o/shopadmin/getshopbyid?shopId=' + shopId;
+    var editShopUrl = '/o2o/shopadmin/modifyshop';
     if (!isEdit) {
         getShopInitInfo();
     } else {

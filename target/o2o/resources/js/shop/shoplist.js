@@ -3,7 +3,7 @@ $(function () {
     function getlist(e) {
         $.ajax({
             // o2o
-            url : '/o2o_war_exploded/shopadmin/getshoplist',
+            url : '/o2o/shopadmin/getshoplist',
             type : 'get',
             dataType : 'json',
             success : function (data) {
@@ -44,7 +44,7 @@ $(function () {
     function goShop(status, id) {
         if (status == 1) {
             // o2o
-            return '<a href="/o2o_war_exploded/shopadmin/shopmanagement?shopId=' + id + '">进入</a>';
+            return '<a href="/o2o/shopadmin/shopmanagement?shopId=' + id + '">进入</a>';
         } else {
             return '';
         }

@@ -1,6 +1,6 @@
 $(function () {
     //定义访问后，获取去头条列表以及一级类别的URL
-    var url = '/o2o_war_exploded/frontend/listmainpageinfo';
+    var url = '/o2o/frontend/listmainpageinfo';
     // 访问后台，获取头条列表以及一级类别列表
     $.getJSON(url, function (data) {
         if (data.success) {
@@ -49,7 +49,7 @@ $(function () {
 
     $('.row').on('click', '.shop-classify', function (e) {
        var shopCategoryId = e.currentTarget.dataset.category;
-       var newUrl = '/o2o_war_exploded/frontend/shoplist?parentId=' + shopCategoryId;
+       var newUrl = '/o2o/frontend/shoplist?parentId=' + shopCategoryId;
        window.location.href = newUrl;
     });
 });
