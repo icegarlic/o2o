@@ -9,7 +9,7 @@ public class PathUtil {
         if (os.toLowerCase().startsWith("win")) {
             basePath = "D:/projectdev/image";
         } else {
-            basePath = "/home/image";
+            basePath = "/Users/baidu/work/image";
         }
         basePath = basePath.replace("/", separator);
         return basePath;
